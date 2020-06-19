@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/46a8aa58aa.js" crossorigin="anonymous"></script> 
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
 </head>
@@ -16,8 +18,15 @@
 
 
     <div class="watchFrame">
+        <div class="marker one"></div>
+        <div class="marker two"></div>
+        <div class="marker four"></div>
+        <div class="marker five"></div>
+        <div class="innerCircle"></div>
+        <div id="pointer"></div>
+        
         <div id="timer">
-            00 : 00 . 000
+            00 : 00 . 00
         </div>
 
 
@@ -26,14 +35,17 @@
 
     <div class="buttons">
 
-    <button id="resetButton">Reset</button>
-    <button id="startButton">Start</button>
-    <button id="lapCountButton">Count Lap</button>
+    <button class="btn shadow-none fas fa-redo-alt fa-lg" id="resetButton"></button>
+    <button class="btn shadow-none fas fa-play-circle fa-3x" id="startButton"></button>
+    <button class="btn shadow-none fas fa-stopwatch fa-lg" id="lapButton"></button>
 
     </div>
 
     <script src="stopwatch.js"></script>
     <script src="main.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>

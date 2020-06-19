@@ -8,6 +8,7 @@ class StopWatch {
 	interval;
 	isRunning = false;
 	displayTime = document.getElementById("timer");
+	pointer = document.getElementById("pointer");
 
 
 //Run the clock if it is not runnig and set an interval calling the upadate method of this class to start the counting on the watch
@@ -41,6 +42,7 @@ class StopWatch {
 		this.isRunning = false;
 		clearInterval(this.interval);
 		this.interval = null;
+		this.pointer.style.transform = `rotate(${this.time}deg)`;
 		
 		return this.displayTime.innerHTML = this.formatTime(this.time);
 	};
@@ -53,6 +55,9 @@ class StopWatch {
 		this.time += this.deltaInterval();
 		this.formattedTime = this.formatTime(this.time);
 		console.log(this.formattedTime);
+		// For every sec move the pointer by 6 degrees;
+		let timeInDegree = this.time/1000*6; 
+		this.pointer.style.transform = `rotate(${timeInDegree}deg)`;
 
 		return this.displayTime.innerHTML = this.formattedTime;
 	};
@@ -63,7 +68,7 @@ class StopWatch {
 		let timeNow = Date.now();
 		let timePassed = timeNow - this.timeStarted;
 		this.timeStarted = timeNow;
-		
+
 		return timePassed;
 
 	}

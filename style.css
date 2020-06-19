@@ -1,50 +1,140 @@
 body {
-    min-height: 100vh;
-    min-width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #efe8e8 ;
-    font-family: 'MuseoModerno', cursive;
-    
+	min-height: 100vh;
+	min-width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #efe8e8;
+	font-family: "MuseoModerno", cursive;
 }
 
-
-
-header{
-    position: fixed;
-    top: 0;
-    margin: 0 auto;
+header {
+	position: fixed;
+	top: 0;
+	margin: 0 auto;
 }
 
-.buttons{
+.buttons {
+	position: fixed;
+	bottom: 50px;
+	margin: 0 auto;
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 5px;
+}
 
-    position: fixed;
-    bottom: 50px;
-    margin: 0 auto;
-    display: inline-block;
+.fa-lg {
+	font-size: 1.5em;
+	vertical-align: -0.25em;
+}
 
+#lapButton {
+	font-size: 2em;
+	color: #3e5b79;
+}
+
+#startButton {
+	color: #1669c0;
+}
+
+#resetButton {
+	color: #3e5b79;
 }
 
 .watchFrame {
-
     position: relative;
-    z-index: 1;
-    height: 300px;
-    width: 300px;
-    border: solid 2px black;
-    border-radius: 50%;
+    z-index: 1000;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	background: white;
+	box-shadow: inset 0 0 10px gray;
+	border: 14px solid black;
 }
 
-#timer{
-   
-    position: absolute;
-    z-index: 2;
-    top: 40%;
-    left: 20%;
-    margin: 0 auto;
-    font-size: 2rem;
-    color: black;
-  
-    
+/* 12-6 marker*/
+
+.watchFrame::before,
+.watchFrame::after,
+.marker {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 100%;
+	background: black;
+	left: 50%;
+	margin-left: -5px;
+	top: 0;
+	z-index: 2;
+}
+
+/* 9-3  marker */
+
+.watchFrame::after {
+	transform: rotate(90deg);
+}
+
+.marker {
+	position: absolute;
+	background: gray;
+	width: 5px;
+	margin: 0px -2px;
+	z-index: 1;
+}
+
+/* 1-7 / 2-8 / 4-10 / 5-11  marks */
+
+.one {
+	transform: rotate(30deg);
+}
+
+.two {
+	transform: rotate(60deg);
+}
+
+.four {
+	transform: rotate(120deg);
+}
+
+.five {
+	transform: rotate(150deg);
+}
+
+/* Digital display */
+
+#timer {
+	position: absolute;
+	z-index: 4;
+	top: 40%;
+	left: 17%;
+	margin: 0 auto;
+	font-size: 2rem;
+	color: black;
+	background-color: #fff;
+}
+
+.innerCircle {
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	background: white;
+	border-radius: 50%;
+	z-index: 3;
+	left: 5%; 
+	top: 5%; 
+}
+
+#pointer {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    width: 2px;
+	background: linear-gradient(to top, transparent 70%, red 30%);
+    border-radius: 50%;
+	z-index: 3;
+	left: 50%; 
+    top: 0;
+    transform: rotate(0deg);
 }

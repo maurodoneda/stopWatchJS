@@ -42,7 +42,7 @@ class StopWatch {
 		this.isRunning = false;
 		clearInterval(this.interval);
 		this.interval = null;
-		this.pointer.style.transform = `rotate(${this.time}deg)`;
+		this.pointer.style.transform = "none";
 		
 		return this.displayTime.innerHTML = this.formatTime(this.time);
 	};
@@ -56,7 +56,7 @@ class StopWatch {
 		this.formattedTime = this.formatTime(this.time);
 		console.log(this.formattedTime);
 		// For every sec move the pointer by 6 degrees;
-		let timeInDegree = this.time/1000*6; 
+		let timeInDegree = this.time/1000*6;
 		this.pointer.style.transform = `rotate(${timeInDegree}deg)`;
 
 		return this.displayTime.innerHTML = this.formattedTime;

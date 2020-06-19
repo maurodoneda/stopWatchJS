@@ -8,49 +8,34 @@ body {
 	font-family: "MuseoModerno", cursive;
 }
 
+
 header {
-	position: fixed;
-	top: 0;
-	margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    margin: 0 auto;
+    font-size: 30px;
 }
 
-.buttons {
-	position: fixed;
-	bottom: 50px;
-	margin: 0 auto;
-	display: inline-block;
-	border: 1px solid;
-	border-radius: 5px;
-	padding: 5px;
-}
 
-.fa-lg {
-	font-size: 1.5em;
-	vertical-align: -0.25em;
-}
+/* -------------------------------- Creating the watch ------------------------------------------ */
 
-#lapButton {
-	font-size: 2em;
-	color: #3e5b79;
-}
-
-#startButton {
-	color: #1669c0;
-}
-
-#resetButton {
-	color: #3e5b79;
+.stopWatchContainer {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
 
 .watchFrame {
-    position: relative;
-    z-index: 1000;
+	position: relative;
+	z-index: 1000;
 	height: 300px;
 	width: 300px;
 	border-radius: 50%;
 	background: white;
 	box-shadow: inset 0 0 10px gray;
 	border: 14px solid black;
+	display: block;
 }
 
 /* 12-6 marker*/
@@ -107,12 +92,14 @@ header {
 	position: absolute;
 	z-index: 4;
 	top: 40%;
-	left: 17%;
+	left: 20%;
 	margin: 0 auto;
-	font-size: 2rem;
+	font-size: 2em;
 	color: black;
 	background-color: #fff;
 }
+
+/* Adding a white inner circle inside the frame to create the points efect */
 
 .innerCircle {
 	position: absolute;
@@ -121,20 +108,85 @@ header {
 	background: white;
 	border-radius: 50%;
 	z-index: 3;
-	left: 5%; 
-	top: 5%; 
+	left: 5%;
+	top: 5%;
 }
+
+/* Creating the seconds running pointer */
 
 #pointer {
 	position: absolute;
-    width: 100%;
-    height: 100%;
-    content: "";
-    width: 2px;
+	width: 100%;
+	height: 100%;
+	content: "";
+	width: 2px;
 	background: linear-gradient(to top, transparent 70%, red 30%);
-    border-radius: 50%;
+	border-radius: 50%;
 	z-index: 3;
-	left: 50%; 
-    top: 0;
-    transform: rotate(0deg);
+	left: 50%;
+	top: 0;
+	transform: rotate(0deg);
+}
+
+/* ----------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* Styling the buttons container */
+
+.buttons {
+    /* position: fixed; */
+	margin: 0 auto;
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+/* Styling the incons buttons */
+
+.fa-lg {
+	font-size: 1.5em;
+	vertical-align: -0.25em;
+}
+
+#lapButton {
+	font-size: 2em;
+	color: #3e5b79;
+}
+
+#startButton {
+	color: #1669c0;
+}
+
+#resetButton {
+	color: #3e5b79;
+}
+
+
+
+/* Creating the laps counter */
+
+.lapContainer {
+	width: 200px;
+	height: 20vh;
+	margin: 5px auto;
+	z-index: 10;
+	border: 3px transparent;
+	bottom: 6rem;
+	display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+
+    overflow: auto;
+    
+}
+
+th{
+    padding: 0 !important;
 }

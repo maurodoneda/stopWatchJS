@@ -35,6 +35,7 @@ resetButton.addEventListener("click", function () {
 		resetButton.style.opacity = 0.3;
         lapButton.style.opacity = 0.3;
         lapContainer.innerHTML = "";
+        lapCount.innerText = "";
         counter = 0;
 	} else {
 		throw new Error("Please pause the clock before reseting");
@@ -44,6 +45,7 @@ resetButton.addEventListener("click", function () {
 // Lap count button login
 
 let lapContainer = document.querySelector('.lapContainer');
+let lapCount = document.querySelector('.lapCount')
 let counter = 0;
 
 lapButton.addEventListener("click", function(){
@@ -57,6 +59,8 @@ lapButton.addEventListener("click", function(){
       </th>`;
 
     lapContainer.appendChild(el);
+    lapCount.innerText = counter;
+
 
 });
 

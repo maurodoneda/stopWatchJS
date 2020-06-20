@@ -8,7 +8,7 @@ class StopWatch {
 	interval;
 	isRunning = false;
 	displayTime = document.getElementById("timer");
-	pointer = document.getElementById("pointer");
+	pointer = document.getElementById("pointerSec");
 
 
 //Run the clock if it is not runnig and set an interval calling the upadate method of this class to start the counting on the watch
@@ -22,7 +22,7 @@ class StopWatch {
 		}
 	};
 
-// Puase the clock and clear the interval to stop the counting.
+// Pause the clock and clear the interval to stop the counting.
 
 	pauseClock = function(){
 		if(this.isRunning){

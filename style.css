@@ -109,12 +109,28 @@ header {
 	border-radius: 50%;
 	z-index: 3;
 	left: 5%;
-	top: 5%;
+    top: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.lapCount{
+    position: absolute;
+    bottom: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: solid 1px;
+    align-items: center;
+    text-align: center;
+    box-shadow: inset 0 0 3px gray;
 }
 
 /* Creating the seconds running pointer */
 
-#pointer {
+#pointerSec {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -127,6 +143,7 @@ header {
 	top: 0;
 	transform: rotate(0deg);
 }
+
 
 /* ----------------------------------------------------------------------------------------------- */
 
@@ -141,9 +158,10 @@ header {
     /* position: fixed; */
 	margin: 0 auto;
 	display: inline-block;
-	border: 1px solid;
+    border: 1px solid #3e5b79;
 	border-radius: 5px;
-	padding: 5px;
+    padding: 5px;
+    box-shadow: inset 0 0 3px grey;
 }
 
 /* Styling the incons buttons */
@@ -181,12 +199,17 @@ header {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-
-
+    color: #3e5b79;
     overflow: auto;
     
 }
 
 th{
     padding: 0 !important;
+}
+
+.lapCount{
+    color: #3e5b79;
+    margin: 0 auto;
+    padding: 2px;
 }

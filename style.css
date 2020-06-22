@@ -139,9 +139,10 @@ header {
 	background: linear-gradient(to top, transparent 70%, red 30%);
 	border-radius: 50%;
 	z-index: 3;
-	left: 50%;
+	left: 135px;
 	top: 0;
-	transform: rotate(0deg);
+    transform: rotate(0deg);
+   
 }
 
 
